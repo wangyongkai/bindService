@@ -25,7 +25,7 @@ import android.view.View;
  *
  * start方式启动服务，再绑定服务，解绑后，没有ondestory,必须调用stopservice方式停止服务后才会ondestory.
  *
- * bindservice方式启动服务。stopservice stopself 均失效
+ * bindservice方式启动服务。解绑后自动执行onDestroy。stopservice stopself 均失效
  * 奇怪现象：start方式启动，再绑定，再点击stopservice，此时没有停止服务，但是再解绑后，却ondestory.
  */
 public class MainActivity extends AppCompatActivity {
